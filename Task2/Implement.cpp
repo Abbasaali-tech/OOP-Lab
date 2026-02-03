@@ -1,46 +1,25 @@
 #include <iostream>
 #include "Employee.h"
-using namespace std;
 
-Employee::Employee() {
-    name = "";
-    id = 0;
-    salary = 0.0;
+void Employee::get_Data(){
+    cout << "Enter employee name: ";
+    cin >> name;
+
+    cout << "Enter employee salary: ";
+    cin >> salary;
+
+    cout << "Enter tax percentage: ";
+    cin >> taxPercentage;
 }
 
-Employee::Employee(string n, int i, double s) {
-    name = n;
-    id = i;
-    salary = s;
+void Employee::Salary_after_tax(){
+    double salaryAfterTax = salary - (salary * taxPercentage / 100);
+    cout << "Salary after tax: " << salaryAfterTax << endl;
 }
 
-void Employee::setName(string n) {
-    name = n;
-}
+void Employee::update_tax_percentage(){
+    cout << "Enter new tax percentage: ";
+    cin >> taxPercentage;
 
-void Employee::setId(int i) {
-    id = i;
-}
-
-void Employee::setSalary(double s) {
-    salary = s;
-}
-
-string Employee::getName() {
-    return name;
-}
-
-int Employee::getId() {
-    return id;
-}
-
-double Employee::getSalary() {
-    return salary;
-}
-
-void Employee::display() {
-    cout << "Name: " << name << endl;
-    cout << "ID: " << id << endl;
-    cout << "Salary: " << salary << endl;
-    cout << "--------------------" << endl;
+    Salary_after_tax();
 }
