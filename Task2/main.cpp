@@ -1,5 +1,9 @@
 #include "Employee.h"
 
+// Now, considering question 5, you are tasked with separating the class definition into a header
+// file (Employee.h), then implementation file (Implement.cpp). Lastly, demonstrate it all by
+// creating at least 3 instances in a separate file containing main function (main.cpp).
+
 int main(){
     Employee emp1, emp2, emp3;
 
