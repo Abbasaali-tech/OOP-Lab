@@ -1,5 +1,4 @@
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -16,4 +15,3 @@ public:
     void update_tax_percentage();
 };
 
-#endif
