@@ -35,7 +35,7 @@ class FootballPlayer{
         }
 
         void scoreGoal(int goals){
-            goalCount = goals;
+            goalCount += goals;
             cout << playerName << " score " << goals << " goal(s)" << endl;
             cout << endl;
         }
@@ -60,9 +60,10 @@ int main(){
     messi.displayProfile();
 
     FootballPlayer messiClone(messi);
-    messi.scoreGoal(2);
-    messi.displayProfile();
+    messiClone.scoreGoal(2);
+    messiClone.displayProfile();
 
     FootballPlayer deBruyne("deBruyne");
     deBruyne.displayProfile();
+
 }
